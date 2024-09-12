@@ -1,9 +1,6 @@
 package org.example;
     private double price; // Ціна товару
     private String description; // Опис товару
-
-
-
     public class Product {
         private int id; // Унікальний ідентифікатор товару
         private String name; // Назва товару
