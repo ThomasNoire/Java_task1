@@ -1,8 +1,15 @@
 package org.example;
 
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Getter
+@Setter
+@ToString
 public class Cart {
     private List<Product> products;
 
@@ -25,18 +32,5 @@ public class Cart {
         }
         return total;
     }
-
-    public List<Product> getProducts() {
-        return new ArrayList<>(products); // Повертає копію списку, забезпечуючи інкапсуляцію
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder("Cart contains:\n");
-        for (Product product : products) {
-            sb.append(product.toString()).append("\n");
-        }
-        sb.append("Total price: ").append(getTotalPrice());
-        return sb.toString();
-    }
 }
+
